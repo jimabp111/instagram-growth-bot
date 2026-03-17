@@ -331,33 +331,9 @@ class InstagramGrowthBot:
 # ─── MAIN ────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     bot = InstagramGrowthBot()
-
-    print("🤖 Instagram Growth Bot")
-    print("=" * 40)
-    print("1. Session unique (maintenant)")
-    print("2. Mode continu (toutes les 24h)")
-    print("3. Stats seulement")
-    print("4. Unfollow seulement")
-
-    choice = input("\nChoix: ").strip()
-
-    if choice == "1":
+    print("🤖 Instagram Growth Bot - Mode automatique")
+    while True:
         bot.run_daily_session()
-
-    elif choice == "2":
-        print("\n🔄 Mode continu activé. Ctrl+C pour arrêter.")
-        while True:
-            bot.run_daily_session()
-            delay = random.uniform(*CONFIG["delay_between_sessions"])
-            print(f"\n⏳ Prochain cycle dans {delay/3600:.1f}h...")
-            time.sleep(delay)
-
-    elif choice == "3":
-        bot.db = load_db()
-        bot.print_stats()
-
-    elif choice == "4":
-        if bot.login():
-            bot.check_follow_backs()
-            bot.unfollow_non_followers()
-            bot.print_stats()
+        delay = random.uniform(*CONFIG["delay_between_sessions"])
+        print(f"\n⏳ Prochain cycle dans {delay/3600:.1f}h...")
+        time.sleep(delay)
