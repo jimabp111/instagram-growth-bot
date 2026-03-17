@@ -11,7 +11,7 @@ import json
 import os
 from datetime import datetime, timedelta
 from instagrapi import Client
-from instagrapi.exceptions import LoginRequired, UserNotFound, FollowError
+from instagrapi.exceptions import LoginRequired, UserNotFound
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 CONFIG = {
@@ -190,7 +190,7 @@ class InstagramGrowthBot:
 
                 self.human_delay(CONFIG["delay_between_follows"])
 
-            except (UserNotFound, FollowError) as e:
+            except (UserNotFound, Exception) as e:
                 print(f"[{self._now()}] ⚠️  Impossible de follow @{username}: {e}")
             except Exception as e:
                 print(f"[{self._now()}] ❌ Erreur: {e}")
