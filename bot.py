@@ -15,8 +15,9 @@ from instagrapi.exceptions import LoginRequired, UserNotFound
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 CONFIG = {
-    "username": os.getenv("IG_USERNAME", ""),
-    "password": os.getenv("IG_PASSWORD", ""),
+    "username": "groupeicx",
+    "password": "Horloge5831!",
+    
 
     # Mots-clés pour trouver des cibles (hashtags business)
     "target_hashtags": [
