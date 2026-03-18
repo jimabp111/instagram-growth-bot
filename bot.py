@@ -10,8 +10,8 @@ from instagrapi import Client
 from instagrapi.exceptions import LoginRequired, UserNotFound
 
 CONFIG = {
-“username”: os.getenv(“IG_USERNAME”, “info@icxinc.ca”),
-“password”: os.getenv(“IG_PASSWORD”, “Horloge5831!”),
+“username”: os.getenv(“IG_USERNAME”, "info@icxinc.ca"),
+“password”: os.getenv(“IG_PASSWORD”, "Horloge5831!"),
 “target_hashtags”: [
 “entrepreneuriat”,
 “businessowner”,
