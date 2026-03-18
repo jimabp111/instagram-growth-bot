@@ -81,6 +81,12 @@ def get_today_stats(db):
 class InstagramGrowthBot:
     def __init__(self):
         self.client = Client()
+proxy_host = os.getenv("PROXY_HOST")
+proxy_port = os.getenv("PROXY_PORT")
+proxy_user = os.getenv("PROXY_USER")
+proxy_pass = os.getenv("PROXY_PASS")
+if proxy_host:
+    self.client.set_proxy(f"http://{proxy_user}:{proxy_pass}@{proxy_host}:{proxy_port}")
         self.db = load_db()
         self.session_file = "session.json"
 
