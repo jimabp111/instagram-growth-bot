@@ -5,7 +5,7 @@ username = os.getenv("IG_USERNAME")
 password = os.getenv("IG_PASSWORD")
 
 username = os.getenv("IG_USERNAME", "info@icxinc.ca")
-print("Password:", password)
+password = os.getenv("IG_PASSWORD", "Horloge5831!")
 print("Bot demarre!")
 
 while True:
