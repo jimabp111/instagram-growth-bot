@@ -1,8 +1,5 @@
-## “””
-Instagram Business Growth Bot
-
-Stratégie : Follow des comptes ciblés->unfollow si pas de follow-back après 7 jours
-“””
+# Instagram Business Growth Bot
+# Follow automatique - Unfollow apres 7 jours sans follow-back
 
 import time
 import random
